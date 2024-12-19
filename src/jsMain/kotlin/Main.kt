@@ -5,6 +5,9 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.jetbrains.compose.web.renderComposable
 
+import kotlinx.browser.document
+import kotlinx.browser.window
+
 fun main() {
     var count: Int by mutableStateOf(0)
 
@@ -29,3 +32,8 @@ fun main() {
     }
 }
 
+@JsExport
+fun ohai()
+{
+    window.alert("Hello, World! UwU")
+}
